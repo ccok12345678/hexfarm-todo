@@ -17,7 +17,7 @@ function TodoRow(props) {
           onChange={() => props.checkTodo(id, props.index)}
         />
       </td>
-      <td className="todo-content">
+      <td className={`todo-content ${isDone ? 'text-muted' : ''}`}>
         {todo}
       </td>
     </tr>
