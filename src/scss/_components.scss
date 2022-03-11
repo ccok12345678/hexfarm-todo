@@ -1,0 +1,53 @@
+.logo {
+  display: block;
+  padding: .25rem;
+  margin-right: 1.25rem;
+}
+.logo-title {
+  display: none;
+}
+
+.todo-table-head {
+  margin-bottom: 1.25rem;
+}
+.todo-table-body {
+  table {
+    width: 100%;
+  }
+}
+
+.form-label {
+  display: none;
+}
+.form-input {
+  padding: .5rem;
+  border: gray 2px solid;
+  border-radius: 0;
+
+  &:focus {
+    border: gold 2px solid;
+    outline: none;
+    caret-color: darkorange;
+  }
+}
+.form-submit {
+  background-color: gold;
+  border: none;
+  font-weight: bold;
+  margin-left: 1rem;
+  padding: .5rem;
+}
+
+.todo-item {
+  font-weight: bold;
+  width: 100%;
+}
+.todo-delete {
+  color: rgb(151, 2, 151);
+  font-size: 1.25rem;
+  width: 100%;
+}
+.todo-content {
+  border-bottom: 1px gray solid;
+  padding: .5rem 1rem;
+}

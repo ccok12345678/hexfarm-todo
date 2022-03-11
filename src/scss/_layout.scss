@@ -1,4 +1,23 @@
 .container {
-  color: green;
-  background: #000;
+  background-image: url('https://www.pakutaso.com/shared/img/thumb/tokunoshimaIMGL4607_TP_V.jpg');
+  background-size: cover;
+  background-position: center center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-board {
+  background-color: #ffffff;
+  padding: 1.25rem;
+  display: flex;
+}
+
+.btn {
+  background: none;
+  border: none;
+  font-weight: bold;
+  padding: .5rem;
+  cursor: pointer;
 }
