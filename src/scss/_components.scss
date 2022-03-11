@@ -7,6 +7,15 @@
   display: none;
 }
 
+.todo-table-head {
+  margin-bottom: 1.25rem;
+}
+.todo-table-body {
+  table {
+    width: 100%;
+  }
+}
+
 .form-label {
   display: none;
 }
@@ -27,4 +36,18 @@
   font-weight: bold;
   margin-left: 1rem;
   padding: .5rem;
+}
+
+.todo-item {
+  font-weight: bold;
+  width: 100%;
+}
+.todo-delete {
+  color: rgb(151, 2, 151);
+  font-size: 1.25rem;
+  width: 100%;
+}
+.todo-content {
+  border-bottom: 1px gray solid;
+  padding: .5rem 1rem;
 }

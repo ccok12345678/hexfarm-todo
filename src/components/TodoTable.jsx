@@ -1,6 +1,6 @@
 import { Component } from "react";
 import InputBar from "./InputBar";
-
+import TodoRow from "./TodoRow";
 class TodoTable extends Component {
   constructor(props) {
     super(props)
@@ -9,11 +9,15 @@ class TodoTable extends Component {
   render() {
     return (
       <div className="todo-table">
-        <div>
+        <header className="todo-table-head">
           <InputBar />
-        </div>
-        <div>
-
+        </header>
+        <div className="todo-table-body">
+          <table>
+            <tbody>
+              <TodoRow />
+            </tbody>
+          </table>
         </div>
       </div>
     )
