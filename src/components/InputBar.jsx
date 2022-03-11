@@ -17,8 +17,15 @@ class InputBar extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
+
+    const todo = this.state.todo.trim()
+    if (todo === '') {
+      this.setState(this.initiateState)
+      return
+    }
+    
     this.props.addTodo({
-      todo: this.state.todo,
+      todo,
       id: Date.now()
     })
     this.setState(this.initiateState)
