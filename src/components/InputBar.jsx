@@ -25,8 +25,9 @@ class InputBar extends Component {
     }
     
     this.props.addTodo({
+      id: Date.now(),
       todo,
-      id: Date.now()
+      isDone: false
     })
     this.setState(this.initiateState)
   }

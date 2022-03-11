@@ -47,6 +47,15 @@
   font-size: 1.25rem;
   width: 100%;
 }
+.todo-is-done {
+  width: 1.25rem;
+  height: 1.25rem;
+
+  &:hover {
+    outline: gold;
+    border: 1px solid gold;
+  }
+}
 .todo-content {
   border-bottom: 1px gray solid;
   padding: .5rem 1rem;
