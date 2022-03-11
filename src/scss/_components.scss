@@ -1,8 +1,30 @@
 .logo {
   display: block;
   padding: .25rem;
+  margin-right: 1.25rem;
 }
-
 .logo-title {
   display: none;
+}
+
+.form-label {
+  display: none;
+}
+.form-input {
+  padding: .5rem;
+  border: gray 2px solid;
+  border-radius: 0;
+
+  &:focus {
+    border: gold 2px solid;
+    outline: none;
+    caret-color: darkorange;
+  }
+}
+.form-submit {
+  background-color: gold;
+  border: none;
+  font-weight: bold;
+  margin-left: 1rem;
+  padding: .5rem;
 }
