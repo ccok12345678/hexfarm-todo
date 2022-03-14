@@ -30,19 +30,42 @@ class TodoTable extends Component {
     this.state = {
       todos: []
     }
+    this.localKey = 'farm-todo'
+  }
+
+  getLocalTodos = () => {
+    return JSON.parse(localStorage.getItem(this.localKey))
+  }
+  componentDidMount() {
+    const localTodos = this.getLocalTodos() || []
+    this.setState({
+      todos: localTodos
+    })
+  }
+
+  setLocalTodos = (todos) => {
+    localStorage.setItem(
+      this.localKey,
+      JSON.stringify(todos)
+    )
   }
 
   addTodo = (todo) => {
+    const todos = [...this.state.todos, todo]
     this.setState({
-      todos: [...this.state.todos, todo]
+      todos
     })
+    
+    this.setLocalTodos(todos)
   }
 
   removeTodo = (id) => {
-    const { todos } = this.state
+    const todos = this.state.todos.filter((todo) => todo.id !== id)
     this.setState({
-      todos: todos.filter((todo) => todo.id !== id)
+      todos
     })
+
+    this.setLocalTodos(todos)
   }
 
   checkTodo = (id) => {
@@ -57,6 +80,8 @@ class TodoTable extends Component {
     this.setState({
       todos: [...todos]
     })
+
+    this.setLocalTodos([...todos])
   }
   
   render() {
