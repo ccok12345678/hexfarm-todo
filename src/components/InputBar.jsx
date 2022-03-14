@@ -35,7 +35,7 @@ class InputBar extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit} className="form">
         <label htmlFor="todo"
           className="form-label"
         >輸入代辦事項：</label>
