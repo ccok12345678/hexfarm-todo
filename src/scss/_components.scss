@@ -2,6 +2,16 @@
   display: block;
   padding: .25rem;
   margin-right: 1.25rem;
+
+  @media (max-width: 767px) {
+    margin-right: 0;
+    margin-bottom: 1.25rem;
+    text-align: center;
+
+    &-img {
+      max-width: 150px;
+    }
+  }
 }
 .logo-title {
   display: none;
@@ -16,6 +26,9 @@
   }
 }
 
+.form {
+  text-align: center;
+}
 .form-label {
   display: none;
 }
@@ -58,5 +71,13 @@
 }
 .todo-content {
   border-bottom: 1px gray solid;
+  overflow: hidden;
+  text-overflow: ellipsis;
   padding: .5rem 1rem;
+  white-space: nowrap;
+  max-width: 350px;
+
+  @media (max-width: 767px) {
+    max-width: 230px;
+  }
 }
