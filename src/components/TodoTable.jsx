@@ -49,14 +49,15 @@ class TodoTable extends Component {
       JSON.stringify(todos)
     )
   }
+  componentDidUpdate() {
+    this.setLocalTodos(this.state.todos)
+  }
 
   addTodo = (todo) => {
     const todos = [...this.state.todos, todo]
     this.setState({
       todos
     })
-    
-    this.setLocalTodos(todos)
   }
 
   removeTodo = (id) => {
@@ -64,8 +65,6 @@ class TodoTable extends Component {
     this.setState({
       todos
     })
-
-    this.setLocalTodos(todos)
   }
 
   checkTodo = (id) => {
@@ -80,8 +79,6 @@ class TodoTable extends Component {
     this.setState({
       todos: [...todos]
     })
-
-    this.setLocalTodos([...todos])
   }
   
   render() {
